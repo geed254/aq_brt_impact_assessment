@@ -1,5 +1,5 @@
 #------------------
-#AMMAN BRT - FLEET ELECTRIFICATION SCENARIOS (BASELINE TO SCENARIO IV)
+#AMMAN BRT + FEEDER- FLEET ELECTRIFICATION SCENARIOS 
 
 setwd("~/Desktop/GitHub/aq_brt_impact_assessment/")
 dir.create("figures", showWarnings = FALSE)
@@ -26,7 +26,7 @@ save_fig = function(filename, plot, ...) {
 }
 #--------------------------------------------------------------
 
-#Fleet composition by scenario (BRT line target = 250 buses; feeder network = 132 buses)
+#Scenario fleet composition (BRT line = 250 buses; feeder network = 132 buses)
 
 scen_levels = c("Baseline", "Scenario I", "Scenario II", "Scenario III", "Scenario IV")
 
@@ -49,8 +49,8 @@ print(fleet)
 scen_axis = setNames(paste0(fleet$scenario, "\n", round(fleet$network_e_share), "% electric"),
                      fleet$scenario)
 
-#--------------------------------------------------------------
 
+#--------------------------------------------------------------
 #Table 1 - annual emissions by scenario
 
 emis = data.frame(
